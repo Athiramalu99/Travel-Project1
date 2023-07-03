@@ -1,19 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-</head>
-<body>
-<h1>Registration</h1>
-<form action="register" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="Username"><br>
-    <input type="password" name="password" placeholder="Password"><br>
-    <input type="submit">
-</form>
-{% for msg in messages %}
-<h2>{{msg}}</h2>
-{% endfor %}
-</body>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="{% static 'styles/design.css' %}">
+    </head>
+    <body background="{% static 'images/d1.jpg' %}">
+        <div class="register">
+            <div class="register1">
+                <h1>Registration Form</h1>
+                <form id="regform" class="" action="register" method="post">
+                    {% csrf_token %}
+                    <label>Username: </label><br>
+                    <input id="name"type="text" name="full_name" value="" placeholder="Enter The Username"><br><br>
+                    <label>E-mail: </label><br>
+                    <input id="name" type="email" name="email" value="" placeholder="Enter The email-id"><br><br>
+                    <label>Phone No: </label><br>
+                    <input id="name" type="text" name="phone_name" value=""placeholder="Enter the Phone number"><br><br>
+                    <label>Gender</label><br>
+                    <input type="radio" name="" value="">
+                    <label>Male</label>
+                    <input type="radio" name="" value="">
+                    <label>Female</label><br><br>
+                    <label>Password: </label>
+                    <input id="name" type="password" name="password" value=""><br><br>
+                    <label>Confirm Password: </label>
+                    <input id="name" type="password" name="confirm_password" value=""><br><br>
+                    <input type="checkbox" name="" value="">
+                    <label>I have read and agree to the Privacy Policy</label><br><br><br>
+                    <input id="submit" type="submit" name="submit" value="Submit">
+                    {% for msg in messages %}
+                    <h2>{{msg}}</h2>
+                    {% endfor %}
+                </form>
+            </div>
+        </div>
+    </body>
 </html>

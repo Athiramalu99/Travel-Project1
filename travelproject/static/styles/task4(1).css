@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+div.main{
+    width:400px;
+    margin: 150px auto 150px auto;
+}
+div.login{
+    background-color: rgba(92, 255, 255, 0.5);
+    color: black;
+    width: 100%;
+    border-radius: 50px;
+
+}
+form#login{
+    margin: 35px auto 50px auto;
+    padding: 60px;
+}
+input#name{
+    width: 250px;
+    border-radius: 10px;
+    padding: 5px;
+}
+input#submit{
+    width: 150px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    margin-left: 75px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: orange;
+    color: white
+}

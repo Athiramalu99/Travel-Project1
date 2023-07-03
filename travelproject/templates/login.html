@@ -1,19 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LOGIN</title>
-</head>
-<body>
-<h2>LOGIN</h2>
-<form action="login" method="post">
-   {% csrf_token %}
-    <input type="text" name="username" placeholder="UserName"><br>
-    <input type="password" name="password" placeholder="Password"><br>
-    <input type="submit" >
-</form>
-{% for msg in messages %}
-{{msg}}
-{% endfor %}
-</body>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'styles/task4(1).css' %}">
+    </head>
+    <body  background="{% static 'images/4.jpg' %}">
+        <div class="main">
+        <div class="login">
+        <form id='login' action="login" method="post">
+            {% csrf_token %}
+            <h1>WELCOME</h1><br>
+            <input id="name" type="text" name="username" value="" placeholder="Username"><br><br>
+            <input id="name" type="password" name="password" value="" placeholder="Password"><br><br>
+            <input id="name" type="password" name="cpassword" value="" placeholder="Confirm Password"><br><br>
+            <input id="submit" type="submit" name="" value="Login">
+            {% for msg in messages %}
+            <h2>{{msg}}</h2>
+            {% endfor %}
+        </form>
+        </div>
+        </div>
+    </body>
 </html>

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-size: 100%;
+}
+div.register{
+    width: 400px;
+    margin: 90px auto auto auto;
+}
+h1{
+    text-align: center;
+}
+div.register1{
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    width: 100%;
+    padding-top: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 2px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 75px
+}
+form#regform{
+    margin: 40px;
+}
+label{
+    font-size: 18px;
+    font-style: italic;
+}
+
+input#name{
+    width: 150px;
+    border-radius: 5PX;
+    padding: 5px;
+}
+input#submit{
+    width:150px;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-left: 90px;
+    color: black;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: orange;
+    color: white;
+}
